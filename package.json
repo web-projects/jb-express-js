@@ -4,11 +4,13 @@
   "description": "Files for my Building a Website with Node & ExpressJS course",
   "main": "app/app.js",
   "scripts": {
-    "start": "node app/app.js"
+    "start": "nodemon -e css,ejs,js,json --watch app"
   },
   "author": "Jon Bianco",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.3"
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "reload": "^2.3.1"
   }
 }
