@@ -18,12 +18,16 @@ app.set('views', 'app/views');
 
 // GLOBAL VARS
 app.locals.siteTitle = "Roux Meetups";
+app.locals.allSpeakers = dataFile.speakers;
 
 // Access static content
 app.use(express.static('app/public'));
 
+// ROUTES
 app.use(require('./routes/index'));
 app.use(require('./routes/speakers'));
+app.use(require('./routes/feedback'));
+app.use(require('./routes/api'));
 
 // Reload on changes to APP
 reload(app, {verbose: true});
